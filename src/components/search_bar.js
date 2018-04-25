@@ -5,13 +5,9 @@ import ReactDOM from 'react-dom';
 class SearchBar extends Component {
 
     constructor(props){
-        
         super(props);
-
         this.state = {term:'Starting value'};
-
     }
-
 
     render(){
         return (
@@ -22,10 +18,9 @@ class SearchBar extends Component {
             </div>
         );
     }
-
-    onInputChange (event){
-        console.log(event.target.value)
-    }
+    // onInputChange (event){
+    //     console.log(event.target.value)
+    // }
 }
 
 
