@@ -1,9 +1,11 @@
 import React from 'react';
+import Rotate from '../style/Rotate';
+// keyframes returns a unique name based on a hash of the contents of the keyframes
 
 const VideoDetail = ({video}) => {
 
     if(!video){
-        return <div> Loading.... </div>
+        return (<Rotate>&lt; 💅 ">">">">&gt;</Rotate>)
     }
 
     const videoId = video.id.videoId;
