@@ -1,11 +1,20 @@
 import React from 'react';
 import Rotate from '../style/Rotate';
+import LinearProgressExampleSimple from './progress-bar';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 // keyframes returns a unique name based on a hash of the contents of the keyframes
 
 const VideoDetail = ({video}) => {
 
     if(!video){
-        return (<Rotate>&lt; 💅 ">">">">&gt;</Rotate>)
+        return (
+            <MuiThemeProvider>       
+                <LinearProgressExampleSimple/>
+          </MuiThemeProvider>
+            
+    
+         )
     }
 
     const videoId = video.id.videoId;
