@@ -1,5 +1,4 @@
 import React from 'react';
-import Rotate from '../style/Rotate';
 import LinearProgressExampleSimple from './progress-bar';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
@@ -16,7 +15,6 @@ const VideoDetail = ({video}) => {
     
          )
     }
-
     const videoId = video.id.videoId;
     const url = `https://www.youtube.com/embed/${videoId}`;
 
@@ -26,7 +24,7 @@ const VideoDetail = ({video}) => {
                 <iframe className="embed-responsive-item" src={url}></iframe>
             </div>
             <div className="details">
-                <div>{video.snippet.title}</div>
+                <div><b>{video.snippet.title}</b></div>
                 <div>{video.snippet.description}</div>
             </div>
         </div>
