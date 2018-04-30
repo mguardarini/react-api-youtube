@@ -1,11 +1,22 @@
 .search-bar {
 
-    margin: 40px;
+    margin: 20px;
     text-align:center
 }
-
 .search-bar input {
-    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress-bar {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.app-bar {
+
+    background-color: #C62828
+
 }
 
 .video-item img {
@@ -21,6 +32,7 @@
 
 .list-group-item {
     cursor:pointer;
+    
 }
 
 .list-group-item:hover {

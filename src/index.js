@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar';
+import AppBar from './components/app-bar';
+
 import YTSearch from "youtube-api-search";
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 import _ from "lodash";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const api_key = "AIzaSyDhN0rdnmMMJuoocA9ysxWe0AzkJnupZvU";
 
@@ -22,7 +25,7 @@ class App extends Component{
         };
         
 
-        this.videoSearch('surfboards');
+        this.videoSearch('react js');
        
     }
 
@@ -42,8 +45,10 @@ class App extends Component{
 
         return (
             <div> 
-
+                <MuiThemeProvider> 
+                <AppBar/>
                 <SearchBar onSearchTermChange={videoSearch}/>
+                </MuiThemeProvider> 
                 <VideoDetail video={this.state.selectedVideo}/>
                 <VideoList 
                     onVideoSelect={selectedVideo=>this.setState({selectedVideo})}  
