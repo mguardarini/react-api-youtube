@@ -1,38 +1,37 @@
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
+import TextField from 'material-ui/TextField';
 
-
-class SearchBar extends Component {
+class SearchBar extends TextField {
 
     constructor(props){
         super(props);
-        this.state = {term:''};
+        this.state = {term:''};  
     }
 
     render(){
         return (
 
-            <div className="search-bar"> 
-                <input 
-                    value={this.state.term}
-                    onChange={event => this.onInputChange(event.target.value)}
-                    placeholder='Pesquisar..'
-
-                />
-            </div>
+          <div className="search-bar">
+              
+              <TextField
+                hintText="Digite o que deseja buscar."
+                floatingLabelText="Pesquisar"
+                id="search"
+                name='search'
+                type="text"
+                value={this.state.term}
+                onChange={event => this.onInputChange(event.target.value)}
+                style={{width:'400px'}}
+              />
+         </div>
         );
     }
-    
+
     onInputChange (term){
        this.setState({term});
        this.props.onSearchTermChange(term);
     }
-}
-
-
-// const SearchBar = () => {
-//     return <input /> //react.createElemente
-// };
+  }
+    
 
 export default SearchBar;
-
