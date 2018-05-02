@@ -1,11 +1,13 @@
 .search-bar {
 
-    margin: 20px;
-    text-align:center
+    margin-left: 250px;
+    text-align:center;
+    display: flex;
 }
 .search-bar input {
     margin-left: auto;
     margin-right: auto;
+  
 }
 
 .progress-bar {
@@ -13,14 +15,15 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 .app-bar {
 
-    background-color: #C62828
-
+    background-color: #C62828;
 }
 
 .video-item img {
     max-width: 64px;
+    background-color: #eee;
 }
 
 .video-detail  .details {
@@ -28,13 +31,34 @@
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    background-color: #eee;
 }
 
 .list-group-item {
     cursor:pointer;
-    
+    background-color: #eee;
 }
 
 .list-group-item:hover {
     background-color: #eee
 }
+
+.footer {
+    width: 100%;
+    padding: 1rem;
+    margin: .5rem 1rem;
+    text-align: center;
+    transition: 200ms;
+    background-color:LightGray;
+    position: relative;
+  }
+
+.body {
+    box-sizing: border-box;
+    background-color: red;
+    position: "fixed";
+}
+
+.button-default {
+    background-color: #EEEEEE;
+}   

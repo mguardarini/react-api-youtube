@@ -1,10 +1,10 @@
 import React from 'react';
 import LinearProgress from 'material-ui/LinearProgress';
 
-const LinearProgressExampleSimple = () => (
+const ProgressBar = () => (
     <LinearProgress mode="indeterminate" 
      className='progress-bar'
     />
   );
   
-  export default LinearProgressExampleSimple;
+  export default ProgressBar;

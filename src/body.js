@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar';
-import AppBar from './components/app-bar';
-
 import YTSearch from "youtube-api-search";
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 import _ from "lodash";
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+
 const api_key = "AIzaSyDhN0rdnmMMJuoocA9ysxWe0AzkJnupZvU";
 
-class App extends Component{
+class Body extends Component{
 
     constructor(props){
 
@@ -41,24 +40,24 @@ class App extends Component{
 
     render(){
 
-        const videoSearch = _.debounce((term)=> {this.videoSearch(term)},300);
+        const videoSearch = _.debounce((term)=> {this.videoSearch(term)},600);
 
         return (
-            <div> 
-                <MuiThemeProvider> 
-                <AppBar/>
+            <div>
+            
+                <MuiThemeProvider>                
                 <SearchBar onSearchTermChange={videoSearch}/>
-                </MuiThemeProvider> 
+                </MuiThemeProvider>
                 <VideoDetail video={this.state.selectedVideo}/>
                 <VideoList 
                     onVideoSelect={selectedVideo=>this.setState({selectedVideo})}  
                     videos={this.state.videos} 
                       
                 />
-
             </div>
-        );
+            
+      );
     }
 }
 
-ReactDOM.render(<App />,document.querySelector('.container'));
+export default Body;
