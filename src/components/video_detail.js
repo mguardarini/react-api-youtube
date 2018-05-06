@@ -1,5 +1,5 @@
 import React from 'react';
-import LinearProgressExampleSimple from './progress-bar';
+import LinearProgressExampleSimple from './progress_bar';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 // keyframes returns a unique name based on a hash of the contents of the keyframes
