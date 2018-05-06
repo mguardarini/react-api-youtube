@@ -1,7 +1,7 @@
 {
-  "name": "redux-simple-starter",
+  "name": "youtube-api-starter",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "Simple starter package for Youtube-API with React and Babel support",
   "main": "main.js",
   "repository": "",
   "scripts": {
@@ -9,8 +9,8 @@
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Mauro Guardarini",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
@@ -36,6 +36,7 @@
     "react-router": "^2.0.1",
     "redux": "^3.0.4",
     "styled-components": "^3.2.6",
+    "sweetalert": "^2.1.0",
     "youtube-api-search": "0.0.5"
   }
 }

@@ -1,8 +1,9 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
-import Button from './button'
-
-
+import Button from './button';
+import Alert from './alert';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import swal from 'sweetalert';
 class SearchBar extends TextField {
 
     constructor(props){
@@ -17,9 +18,9 @@ class SearchBar extends TextField {
                         <TextField
                                 hintText="Digite o que deseja buscar."
                                 floatingLabelText="Pesquisar"
-                                id="required"
+                                name='search_bar'
                                 ref={"search"}
-                                defaultValue={"iCasei"}
+                                //defaultValue={"iCasei"}
                                 style={{width:'400px'}}
                             />
                        <Button label="Pesquisar" searchVideo={event => this.onInputChange(this.refs.search.input.value)}/>
@@ -33,6 +34,18 @@ class SearchBar extends TextField {
         console.log({term});
     }
     onInputChange (term){
+       if(!term){
+            return (
+                swal({
+                    title: "Aviso",
+                    text: "O campo pesquisar não pode estar vazio.",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                  })
+                
+            )
+       }
        this.setState({term});
        this.props.onSearchTermChange(term);
     }
