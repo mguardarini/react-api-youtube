@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import SearchBar from './components/search_bar';
+import SearchBar from './search_bar';
 import YTSearch from "youtube-api-search";
-import VideoList from './components/video_list';
-import VideoDetail from './components/video_detail';
+import VideoList from './video_list';
+import VideoDetail from './video_detail';
 import _ from "lodash";
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 

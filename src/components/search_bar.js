@@ -16,14 +16,14 @@ class SearchBar extends TextField {
                 <div className="search-bar">
                 
                         <TextField
-                                hintText="Digite o que deseja buscar."
-                                floatingLabelText="Pesquisar"
+                                hintText="How can i help you?"
+                                floatingLabelText="Search"
                                 name='search_bar'
                                 ref={"search"}
                                 //defaultValue={"iCasei"}
                                 style={{width:'400px'}}
                             />
-                       <Button label="Pesquisar" searchVideo={event => this.onInputChange(this.refs.search.input.value)}/>
+                       <Button label="Search" searchVideo={event => this.onInputChange(this.refs.search.input.value)}/>
                 </div>
          
         );
@@ -37,8 +37,8 @@ class SearchBar extends TextField {
        if(!term){
             return (
                 swal({
-                    title: "Aviso",
-                    text: "O campo pesquisar não pode estar vazio.",
+                    title: "Warning",
+                    text: "The search field can't be empty.",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,

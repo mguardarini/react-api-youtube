@@ -1,5 +1,4 @@
 import React from 'react';
-
 //You should send one  or more proprities in 
 const VideoListItem = ({video,onVideoSelect}) => {
     
