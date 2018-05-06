@@ -1,6 +1,6 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
-import Button from './raised_button'
+import Button from './button'
 
 
 class SearchBar extends TextField {
@@ -17,23 +17,21 @@ class SearchBar extends TextField {
                         <TextField
                                 hintText="Digite o que deseja buscar."
                                 floatingLabelText="Pesquisar"
-                                id="search"
-                                name='search'
-                                type="text"
-                                value={this.state.term}
-                                onChange={event => this.onInputChange(event.target.value)}
+                                id="required"
+                                ref={"search"}
+                                defaultValue={"iCasei"}
                                 style={{width:'400px'}}
                             />
-                        <Button title="Pesquisar"
-                            value={this.state.term}
-                            onClick={event => this.onInputChange(event.target.value)}
-
-                        />
+                       <Button label="Pesquisar" searchVideo={event => this.onInputChange(this.refs.search.input.value)}/>
                 </div>
          
         );
     }
 
+    //Test get value
+    handleClick(term){
+        console.log({term});
+    }
     onInputChange (term){
        this.setState({term});
        this.props.onSearchTermChange(term);

@@ -22,10 +22,7 @@ class Body extends Component{
             selectedVideo:null
         
         };
-        
-
-        this.videoSearch('react js');
-       
+        this.videoSearch('react js');    
     }
 
     videoSearch(term){
@@ -40,13 +37,13 @@ class Body extends Component{
 
     render(){
 
-        const videoSearch = _.debounce((term)=> {this.videoSearch(term)},600);
+        const vSearch = (term)=> this.videoSearch(term);
 
         return (
             <div>
             
                 <MuiThemeProvider>                
-                <SearchBar onSearchTermChange={videoSearch}/>
+                <SearchBar onSearchTermChange={vSearch}/>
                 </MuiThemeProvider>
                 <VideoDetail video={this.state.selectedVideo}/>
                 <VideoList 
