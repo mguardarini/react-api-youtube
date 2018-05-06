@@ -14,7 +14,7 @@ const nearbyIcon = <IconLike />;
  * provided. The selected `BottomNavigationItem` is determined by application
  * state (for instance, by the URL).
  */
-class BottomNavigationExampleSimple extends Component {
+class Bottom extends Component {
   state = {
     selectedIndex: 0,
   };
@@ -45,4 +45,4 @@ class BottomNavigationExampleSimple extends Component {
   }
 }
 
-export default BottomNavigationExampleSimple;
+export default Bottom;

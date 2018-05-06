@@ -1,9 +1,9 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
 import Button from './button';
-import Alert from './alert';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import swal from 'sweetalert';
+
 class SearchBar extends TextField {
 
     constructor(props){
@@ -30,9 +30,9 @@ class SearchBar extends TextField {
     }
 
     //Test get value
-    handleClick(term){
-        console.log({term});
-    }
+    // handleClick(term){
+    //     console.log({term});
+    // }
     onInputChange (term){
        if(!term){
             return (
@@ -43,7 +43,6 @@ class SearchBar extends TextField {
                     buttons: true,
                     dangerMode: true,
                   })
-                
             )
        }
        this.setState({term});

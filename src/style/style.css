@@ -29,8 +29,8 @@
 .video-detail  .details {
     margin-top: 10px;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    /* border: 1px solid #ddd; */
+    /* border-radius: 4px; */
     background-color: #eee;
 }
 
@@ -60,5 +60,5 @@
 }
 
 .button-default {
-    background-color: #EEEEEE;
+   margin:30px;
 }   
