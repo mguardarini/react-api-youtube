@@ -1,6 +1,7 @@
 import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import IconSearch from 'material-ui/svg-icons/action/search.js';
+
 class Button extends RaisedButton {
 
   constructor(props){

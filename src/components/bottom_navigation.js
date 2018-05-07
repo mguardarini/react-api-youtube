@@ -5,15 +5,9 @@ import Paper from 'material-ui/Paper';
 import IconLike from 'material-ui/svg-icons/action/favorite-border';
 import IconShare from 'material-ui/svg-icons/social/share.js';
 
-const recentsIcon = <FontIcon className="material-icons"></FontIcon>;
 const shareIcon = <IconShare/>;
 const likeIcon = <IconLike />;
 
-/**
- * A simple example of `BottomNavigation`, with three labels and icons
- * provided. The selected `BottomNavigationItem` is determined by application
- * state (for instance, by the URL).
- */
 class Bottom extends Component {
   state = {
     selectedIndex: 0,
