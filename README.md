@@ -4,6 +4,15 @@ This is a simple example how can i use the Youtube API and React with Material-u
 
 I think the best form to learn is using, in this case, in the next step you will understand how do you install all the tools you need.
 
+### Directory Structure
+
+```
+├── /src/                    # Source code of React 
+│   ├── /components/         # js files
+│   ├── /style/              # CSS files
+├── /test/                   # Test helpers
+```
+
 
 ### Getting Started
 
